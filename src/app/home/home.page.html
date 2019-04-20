@@ -8,7 +8,20 @@
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+      
+    <ion-grid class="grid">
+      <ion-row class="row">
+          <ion-col class="col col_customizada col_esquerda">
+              <ion-button (click)="mostrarValorMonitorar()">Mostrar valor monitorar</ion-button>
+          </ion-col>
+          <ion-col class="col col_customizada col_direita">
+              <ion-button>Default 2</ion-button>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-item >
+        <ion-label>Monitorar</ion-label>
+        <ion-checkbox  [(ngModel)]="monitoraSegundoPlano" (ngModelChange)="monitorarEvent($event)"></ion-checkbox>
+    </ion-item>
   </div>
 </ion-content>
